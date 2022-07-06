@@ -13,7 +13,7 @@
 <table id="arbolados" class="table table-dark table-striped table-bordered shadow-lg mt-4">
 <thead class="bg-primary text-white">
     <tr>
-        <th scope="col">Id</th>
+        <th scope="col">Idd</th>
         <th scope="col">Localizacion</th>
         <th scope="col">Este</th>
         <th scope="col">Norte</th>
