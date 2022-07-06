@@ -1,10 +1,17 @@
-@extends('layouts.PlantillaBaseArbolado');
+@extends('adminlte::page')
 
-@section('contenido')
+@section('title', 'CRUD ARBOLADO')
 
-<a href="arbolados/create" class="btn btn-primary">CREAR</a>
-<table class="table table-dark table-striped mt-4">
-<thead>
+@section('content_header')
+    <h1>Registros tabla Arbolado</h1>
+@stop
+
+@section('content')
+
+<a href="arbolados/create" class="btn btn-primary mb-3">CREAR</a>
+
+<table id="arbolados" class="table table-dark table-striped table-bordered shadow-lg mt-4">
+<thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>
         <th scope="col">Localizacion</th>
@@ -113,5 +120,23 @@
 
 
 </table>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+@stop
+
+@section('js')
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#arbolados').DataTable({
+            "lengthMenu":[[5, 10, 50,-1],[5,10,50,"All"]]
+    });
+    });
+</script>
+@stop

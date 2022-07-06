@@ -1,13 +1,20 @@
-@extends('layouts.PlantillaBaseTipo');
+@extends('adminlte::page')
 
-@section('contenido')
+@section('title', 'CRUD TIPO')
 
-<a href="tipos/create" class="btn btn-primary">CREAR</a>
-<table class="table table-dark table-striped mt-4">
-<thead>
+@section('content_header')
+    <h1>Registros de la Tabla Tipo</h1>
+@stop
+
+@section('content')
+
+<a href="tipos/create" class="btn btn-primary mb-3">CREAR</a>
+
+<table id="tipos" class="table table-dark table-striped table-bordered shadow-lg mt-4">
+<thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">NombreTipo</th>
+        <th scope="col">Nombre Tipo</th>
         <th scope="col">Acciones</th>
     </tr>
 </thead>
@@ -32,4 +39,23 @@
 
 </table>
 
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+@stop
+
+@section('js')
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#tipos').DataTable({
+        "lengthMenu":[[5, 10, 50,-1],[5,10,50,"All"]]
+});
+});
+</script>
+@stop

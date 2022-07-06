@@ -1,7 +1,12 @@
-@extends('layouts.plantillaBaseOrigen');
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>Editar registros de Origen</h2>
+@section('title', 'CRUD ARBOLADO')
+
+@section('content_header')
+    <h1>Editar Registros de la Tabla Arbolado</h1>
+@stop
+
+@section('content')
 
 <form action="/origens/{{ $Adato->id }}" method="POST">
 
@@ -174,4 +179,12 @@
       <a href="/origens" class="btn btn-secondary" tabindex="43">Cancelar</a>
       <button type="submit" class="btn btn-primary" tabindex="42">Guardar</button>
     </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

@@ -78,7 +78,7 @@ class OrigenController extends Controller
      */
     public function update(Request $request,  $id)
     {
-        $Odato = Origen::find($id) ;
+        $Odato = Origen::find($id);
 
         $Odato->id =$request->get('id');
         $Odato->Nom_Origen=$request->get('Nom_Origen');

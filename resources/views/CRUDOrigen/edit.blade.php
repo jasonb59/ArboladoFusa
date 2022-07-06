@@ -1,8 +1,12 @@
-@extends('layouts.plantillaBaseOrigen');
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>Editar registros de Origen</h2>
+@section('title', 'Dashboard')
 
+@section('content_header')
+    <h1>Editar registros de Origen</h1>
+@stop
+
+@section('content')
 <form action="/origens/{{ $Odato->id }}" method="POST">
 
     @csrf
@@ -19,4 +23,12 @@
       <a href="/origens" class="btn btn-secondary" tabindex="4">Cancelar</a>
       <button type="submit" class="btn btn-primary" tabindex="3">Guardar</button>
     </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

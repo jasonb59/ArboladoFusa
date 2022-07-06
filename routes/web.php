@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+/*
+//modificacion para configurar el adminlt
+Route::get('/', function () {
+    return view('auth.login');
+});
+
+*/
 
 //ruta CRUD Origen
 

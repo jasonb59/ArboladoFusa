@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
+
 {
     /**
      * Run the migrations.
@@ -59,7 +60,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('Origen')->references('id')->on('origens')->onDelete('cascade');
+            $table->foreign('Origen')->references('id')->on('origens')->onDelete('set null');
             $table->foreign('Econservacion')->references('id')->on('estd_conservas')->onDelete('cascade');
             $table->foreign('Habito')->references('id')->on('habitos')->onDelete('cascade');
             $table->foreign('Tipo')->references('id')->on('tipos')->onDelete('cascade');

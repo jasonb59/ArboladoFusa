@@ -1,7 +1,12 @@
-@extends('layouts.PlantillaBaseEstdConserva');
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>Editar registros de Estado de Conservacion</h2>
+@section('title', 'CRUD ESTADO DE CONSERVACION')
+
+@section('content_header')
+    <h1>Editar registros de Estado de Conservacion</h1>
+@stop
+
+@section('content')
 
 <form action="/estd_conservas/{{ $ECdato->id }}" method="POST">
 
@@ -19,4 +24,12 @@
       <a href="/estd_conservas" class="btn btn-secondary" tabindex="4">Cancelar</a>
       <button type="submit" class="btn btn-primary" tabindex="3">Guardar</button>
     </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

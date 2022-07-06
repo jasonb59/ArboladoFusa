@@ -1,8 +1,12 @@
-@extends('layouts.PlantillaBaseTipo');
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>Editar registros de Tipo</h2>
+@section('title', 'CRUD TIPO')
 
+@section('content_header')
+    <h1>Editar registros de Tipo</h1>
+@stop
+
+@section('content')
 <form action="/tipos/{{ $Tdato->id }}" method="POST">
 
     @csrf
@@ -19,4 +23,12 @@
       <a href="/tipos" class="btn btn-secondary" tabindex="4">Cancelar</a>
       <button type="submit" class="btn btn-primary" tabindex="3">Guardar</button>
     </form>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop

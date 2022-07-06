@@ -1,7 +1,12 @@
-@extends('layouts.PlantillaBaseEstado');
+@extends('adminlte::page')
 
-@section('contenido')
-<h2>Editar registros tabla Estado</h2>
+@section('title', 'CRUD RAIZ')
+
+@section('content_header')
+    <h1>Editar registros tabla Estado</h1>
+@stop
+
+@section('content')
 
 <form action="/raizs/{{ $Rdato->id }}" method="POST">
 
@@ -19,5 +24,12 @@
       <a href="/raizs" class="btn btn-secondary" tabindex="4">Cancelar</a>
       <button type="submit" class="btn btn-primary" tabindex="3">Guardar</button>
     </form>
-@endsection
+@stop
 
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+
+@stop
