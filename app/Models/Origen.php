@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Origen extends Model
 {
     use HasFactory;
-//relacion de uno a muchos origen -arbolado
 
-public function arbolado(){
-    return $this->hasMany(Arbolado::class,'id');
-}
+    protected $fillable= [
+        'id',
+        'Nom_Origen'
+    ];
 
 }

@@ -3,13 +3,13 @@
 @section('title', 'CRUD RAIZ')
 
 @section('content_header')
-    <h1>Tabla Registros Raiz</h1>
+    <h1>Tabla de Registros de Raiz</h1>
 @stop
 
 @section('content')
 <a href="raizs/create" class="btn btn-primary mb-3">CREAR</a>
 
-<table id="raizs" class="table table-dark table-striped mt-4">
+<table id="raizs" class="table table-dark table-striped mt-4" style="width:100%">
 <thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>

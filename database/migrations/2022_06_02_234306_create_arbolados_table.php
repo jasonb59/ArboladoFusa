@@ -18,18 +18,18 @@ return new class extends Migration
 
             $table->bigIncrements('id');
             $table->text('Localizacion');
-            $table->float ('Este');
-            $table->float('Norte');
+            $table->float ('Este',9,4);
+            $table->float('Norte',9,4);
             $table->text ('Nom_Cientifico');
             $table->String('Familia',45);
             $table->String ('Nom_Comun',45);
-            $table->bigInteger('Origen')->unsigned();
-            $table->bigInteger('Econservacion')->unsigned();
-            $table->bigInteger ('Habito')->unsigned();
-            $table->bigInteger ('Tipo')->unsigned();
-            $table->bigInteger ('Sitio')->unsigned();
-            $table->bigInteger ('Estado')->unsigned();
-            $table->bigInteger ('Raiz')->unsigned();
+            $table->unsignedBigInteger('Origen_id');
+            $table->unsignedBigInteger('Econservacion_id');
+            $table->unsignedBigInteger ('Habito_id');
+            $table->unsignedBigInteger ('Tipo_id');
+            $table->unsignedBigInteger ('Sitio_id');
+            $table->unsignedBigInteger ('Estado_id');
+            $table->unsignedBigInteger ('Raiz_id');
             $table-> text ('DAP_m');
             $table-> text ('Alt_Total');
             $table-> string ('Alt_Comercial',10);
@@ -58,16 +58,35 @@ return new class extends Migration
             $table-> text('Estrato');
             $table->text ('Observaciones');
 
+            $table->foreign('Origen_id')
+            ->references('id')->on('origens')
+            ->onDelete('set null');
+
+            $table->foreign('Econservacion_id')
+            ->references('id')->on('estd_conservas')
+            ->onDelete('set null');
+
+            $table->foreign('Habito_id')
+            ->references('id')->on('habitos')
+            ->onDelete('set null');
+
+            $table->foreign('Tipo_id')
+            ->references('id')->on('tipos')
+            ->onDelete('set null');
+
+            $table->foreign('Sitio_id')
+            ->references('id')->on('sitios')
+            ->onDelete('set null');
+
+            $table->foreign('Estado_id')
+            ->references('id')->on('estados')
+            ->onDelete('set null');
+
+            $table->foreign('Raiz_id')
+            ->references('id')->on('raizs')
+            ->onDelete('set null');
+
             $table->timestamps();
-
-            $table->foreign('Origen')->references('id')->on('origens')->onDelete('set null');
-            $table->foreign('Econservacion')->references('id')->on('estd_conservas')->onDelete('cascade');
-            $table->foreign('Habito')->references('id')->on('habitos')->onDelete('cascade');
-            $table->foreign('Tipo')->references('id')->on('tipos')->onDelete('cascade');
-            $table->foreign('Sitio')->references('id')->on('sitios')->onDelete('cascade');
-            $table->foreign('Estado')->references('id')->on('estados')->onDelete('cascade');
-            $table->foreign('Raiz')->references('id')->on('raizs')->onDelete('cascade');
-
         });
     }
 

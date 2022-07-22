@@ -3,6 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Arbolado;
+use App\Models\Estado;
+use App\Models\Origen;
+use App\Models\EstdConserva;
+use App\Models\Habito;
+use App\Models\Raiz;
+use App\Models\Sitio;
+use App\Models\Tipo;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ArboladoController extends Controller
@@ -14,8 +22,17 @@ class ArboladoController extends Controller
      */
     public function index()
     {
-        $Adatos = Arbolado::all();
-        return view('CRUDArbolado.index')->with('Adatos',$Adatos);
+        $arbolados = DB::table('arbolados')
+        ->join('origens', 'origens.id', '=', 'arbolados.Origen_id')
+        ->join('estd_conservas','estd_conservas.id','=','arbolados.Econservacion_id')
+        ->join('habitos','habitos.id','=','arbolados.Habito_id')
+        ->join('tipos','habitos.id','=','arbolados.Tipo_id')
+        ->join('sitios','habitos.id','=','arbolados.Sitio_id')
+        ->join('estados','habitos.id','=','arbolados.Estado_id')
+        ->join('raizs','habitos.id','=','arbolados.Raiz_id')
+        ->select('arbolados.*', 'origens.Nom_Origen','estd_conservas.Nom_Econservacion','habitos.Nom_Habito','tipos.Nom_Tipo','sitios.Nom_Sitio','estados.Nom_Estado','raizs.Nom_Raiz')
+        ->get();
+        return view('CRUDArbolado.index', compact('arbolados'));
     }
 
     /**
@@ -25,7 +42,18 @@ class ArboladoController extends Controller
      */
     public function create()
     {
-        return view('CRUDArbolado.create');
+//se modifica la vista para traer los datos
+       $origenes = Origen::all();
+       $econservacions = EstdConserva::all();
+       $habitos = Habito ::all();
+       $tipos = Tipo ::all();
+       $sitios = Sitio ::all();
+       $estados = Estado ::all();
+       $raizs = Raiz ::all();
+       return view('CRUDArbolado.create',compact('origenes', 'econservacions','habitos','tipos','sitios','estados','raizs'));
+
+
+
     }
 
     /**
@@ -38,20 +66,20 @@ class ArboladoController extends Controller
     {
         $Adatos = new Arbolado();
 
-        $Adatos->id =$request->get('id');
+
         $Adatos->Localizacion=$request->get('Localizacion');
         $Adatos->Este=$request->get('Este');
         $Adatos->Norte=$request->get('Norte');
         $Adatos->Nom_Cientifico=$request->get('Nom_Cientifico');
         $Adatos->Familia=$request->get('Familia');
         $Adatos->Nom_Comun=$request->get('Nom_Comun');
-        $Adatos->Origen=$request->get('Origen');
-        $Adatos->Econservacion=$request->get('Econservacion');
-        $Adatos->Habito=$request->get('Habito');
-        $Adatos->Tipo=$request->get('Tipo');
-        $Adatos->Sitio=$request->get('Sitio');
-        $Adatos->Estado=$request->get('Estado');
-        $Adatos->Raiz=$request->get('Raiz');
+        $Adatos->Origen_id=$request->get('Origen_id');
+        $Adatos->Econservacion_id=$request->get('Econservacion_id');
+        $Adatos->Habito_id=$request->get('Habito_id');
+        $Adatos->Tipo_id=$request->get('Tipo_id');
+        $Adatos->Sitio_id=$request->get('Sitio_id');
+        $Adatos->Estado_id=$request->get('Estado_id');
+        $Adatos->Raiz_id=$request->get('Raiz_id');
         $Adatos->DAP_m=$request->get('DAP_m');
         $Adatos->Alt_Total=$request->get('Alt_Total');
         $Adatos->Alt_Comercial=$request->get('Alt_Comercial');

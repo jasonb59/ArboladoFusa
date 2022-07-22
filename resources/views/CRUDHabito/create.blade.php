@@ -11,10 +11,7 @@
 <form action="/habitos" method="POST">
 
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label">id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
+
   <div class="mb-3">
     <label for="" class="form-label">Nombre Habito</label>
     <input id="Nom_Habito" name="Nom_Habito" type="text" class="form-control" tabindex="2">

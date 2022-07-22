@@ -13,10 +13,7 @@
     @csrf
     @method('PUT')
 
-      <div class="mb-3">
-        <label for="" class="form-label">Id</label>
-        <input id="id" name="id" type="text" class="form-control" value="{{ $ECdato->id }}">
-      </div>
+
       <div class="mb-3">
         <label for="" class="form-label">NombreOrigen</label>
         <input id="Nom_Econservacion" name="Nom_Econservacion" type="text" class="form-control" value="{{ $ECdato->Nom_Econservacion }}">

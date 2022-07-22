@@ -12,11 +12,7 @@
 
     @csrf
     @method('PUT')
-    <div class="mb-3">
-        <label for="" class="form-label">Id</label>
-        <input id="id" name="id" type="text" class="form-control" value="{{ $Adato->id }}">
-      </div>
-      <div class="mb-3">
+         <div class="mb-3">
         <label for="" class="form-label">Localizacion</label>
         <input id="Localizacion" name="Localizacion" type="text" class="form-control" value="{{ $Adato->Localizacion }}">
       </div>

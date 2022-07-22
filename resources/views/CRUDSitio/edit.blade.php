@@ -14,10 +14,6 @@
     @method('PUT')
 
       <div class="mb-3">
-        <label for="" class="form-label">Id</label>
-        <input id="id" name="id" type="text" class="form-control" value="{{ $Sdato->id }}">
-      </div>
-      <div class="mb-3">
         <label for="" class="form-label">NombreOrigen</label>
         <input id="Nom_Sitio" name="Nom_Sitio" type="text" class="form-control" value="{{ $Sdato->Nom_Sitio }}">
       </div>

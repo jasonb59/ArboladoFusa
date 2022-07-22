@@ -3,14 +3,14 @@
 @section('title', 'CRUD ESTADO DE CONSERVACION')
 
 @section('content_header')
-    <h1>Registro tabla Estado de Conservacion</h1>
+    <h1>Tabla  de Registros de Estado de Conservacion</h1>
 @stop
 
 @section('content')
 
 <a href="estd_conservas/create" class="btn btn-primary mb-3">CREAR</a>
 
-<table id="estd_conservas" class="table table-dark table-striped table-bordered shadow-lg mt-4">
+<table id="estd_conservas" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
 <thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>
@@ -50,6 +50,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
 <script>
 $(document).ready(function () {
     $('#estd_conservas').DataTable({

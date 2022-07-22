@@ -11,10 +11,7 @@
 <form action="/sitios" method="POST">
 
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label">Id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
+
   <div class="mb-3">
     <label for="" class="form-label">Nombre Sitio</label>
     <input id="Nom_Sitio" name="Nom_Sitio" type="text" class="form-control" tabindex="2">

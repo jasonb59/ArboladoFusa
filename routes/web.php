@@ -26,14 +26,14 @@ Route::get('/', function () {
 
 //ruta CRUD Origen
 
-Route::resource('origens','App\Http\Controllers\OrigenController');
-Route::resource('estd_conservas','App\Http\Controllers\EstdConservaController');
-Route::resource('habitos', 'App\Http\Controllers\HabitoController');
-Route::resource('tipos','App\Http\Controllers\TipoController');
-Route::resource('sitios','App\Http\Controllers\SitioController');
-Route::resource('estados','App\Http\Controllers\EstadoController');
-Route::resource('raizs','App\Http\Controllers\RaizController');
-Route::resource('arbolados','App\Http\Controllers\ArboladoController');
+Route::resource('origens', App\Http\Controllers\OrigenController::class);
+Route::resource('estd_conservas', App\Http\Controllers\EstdConservaController::class);
+Route::resource('habitos', App\Http\Controllers\HabitoController::class);
+Route::resource('tipos',App\Http\Controllers\TipoController::class);
+Route::resource('sitios',App\Http\Controllers\SitioController::class);
+Route::resource('estados',App\Http\Controllers\EstadoController::class);
+Route::resource('raizs',App\Http\Controllers\RaizController::class);
+Route::resource('arbolados',App\Http\Controllers\ArboladoController::class);
 
 Route::middleware([
     'auth:sanctum',

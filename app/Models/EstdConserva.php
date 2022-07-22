@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class EstdConserva extends Model
 {
     use HasFactory;
+
+      protected $fillable= [
+        'id',
+        'Nom_Econservacion'
+    ];
+
 }

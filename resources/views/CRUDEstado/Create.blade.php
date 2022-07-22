@@ -11,10 +11,7 @@
 <form action="/estados" method="POST">
 
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label">Id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
+
   <div class="mb-3">
     <label for="" class="form-label">Nombre Estado</label>
     <input id="Nom_Estado" name="Nom_Estado" type="text" class="form-control" tabindex="2">

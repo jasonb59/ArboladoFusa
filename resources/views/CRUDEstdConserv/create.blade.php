@@ -11,10 +11,7 @@
 <form action="/estd_conservas" method="POST">
 
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label">Id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
+
   <div class="mb-3">
     <label for="" class="form-label">Nombre estado de Conservacion</label>
     <input id="Nom_Econservacion" name="Nom_Econservacion" type="text" class="form-control" tabindex="2">

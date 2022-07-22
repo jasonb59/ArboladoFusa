@@ -14,7 +14,7 @@
     <thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Nombre Origen</th>
+        <th scope="col">Nombre de Origen</th>
         <th scope="col">Acciones</th>
     </tr>
     </thead>

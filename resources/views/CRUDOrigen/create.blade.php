@@ -11,12 +11,9 @@
 <form action="/origens" method="POST">
 
     @csrf
+
   <div class="mb-3">
-    <label for="" class="form-label">Id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
-  <div class="mb-3">
-    <label for="" class="form-label">NombreOrigen</label>
+    <label for="" class="form-label">Nombre Origen</label>
     <input id="Nom_Origen" name="Nom_Origen" type="text" class="form-control" tabindex="2">
   </div>
   <a href="/origens" class="btn btn-secondary" tabindex="4">Cancelar</a>

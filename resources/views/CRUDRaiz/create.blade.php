@@ -11,10 +11,7 @@
 <form action="/raizs" method="POST">
 
     @csrf
-  <div class="mb-3">
-    <label for="" class="form-label">Id</label>
-    <input id="id" name="id" type="text" class="form-control" tabindex="1">
-  </div>
+
   <div class="mb-3">
     <label for="" class="form-label">Nombre de Raiz</label>
     <input id="Nom_Raiz" name="Nom_Raiz" type="text" class="form-control" tabindex="2">

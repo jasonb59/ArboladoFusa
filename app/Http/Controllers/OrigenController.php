@@ -37,10 +37,7 @@ class OrigenController extends Controller
     public function store(Request $request)
     {
         $Odatos = new Origen();
-
-        $Odatos->id =$request->get('id');
         $Odatos->Nom_Origen=$request->get('Nom_Origen');
-
         $Odatos->save();
 
         return redirect('/origens');

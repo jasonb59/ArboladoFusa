@@ -10,7 +10,7 @@
 
 <a href="estados/create" class="btn btn-primary mb-3">CREAR</a>
 
-<table id="estados" class="table table-dark table-striped table-bordered shadow-lg mt-4">
+<table id="estados" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
 <thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>

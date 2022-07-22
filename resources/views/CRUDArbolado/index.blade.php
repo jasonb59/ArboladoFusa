@@ -10,7 +10,7 @@
 
 <a href="arbolados/create" class="btn btn-primary mb-3">CREAR</a>
 
-<table id="arbolados" class="table table-dark table-striped table-bordered shadow-lg mt-4">
+<table id="arbolados" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
 <thead class="bg-primary text-white">
     <tr>
         <th scope="col">Id</th>
@@ -58,7 +58,7 @@
     </tr>
 </thead>
 <tbody>
-    @foreach ($Adatos as $Adato )
+    @foreach ($arbolados as $Adato )
         <tr>
             <td>{{ $Adato->id }}</td>
             <td>{{ $Adato->Localizacion }}</td>
@@ -67,13 +67,13 @@
             <td>{{ $Adato->Nom_Cientifico }}</td>
             <td>{{ $Adato->Familia }}</td>
             <td>{{ $Adato->Nom_Comun }}</td>
-            <td>{{ $Adato->Origen }}</td>
-            <td>{{ $Adato->Econservacion }}</td>
-            <td>{{ $Adato->Habito }}</td>
-            <td>{{ $Adato->Tipo }}</td>
-            <td>{{ $Adato->Sitio }}</td>
-            <td>{{ $Adato->Estado }}</td>
-            <td>{{ $Adato->Raiz }}</td>
+            <td>{{ $Adato->Nom_Origen}}</td>
+            <td>{{ $Adato->Nom_Econservacion}}</td>
+            <td>{{ $Adato->Nom_Habito }}</td>
+            <td>{{ $Adato->Nom_Tipo }}</td>
+            <td>{{ $Adato->Nom_Sitio }}</td>
+            <td>{{ $Adato->Nom_Estado }}</td>
+            <td>{{ $Adato->Nom_Raiz }}</td>
             <td>{{ $Adato->DAP_m }}</td>
             <td>{{ $Adato->Alt_Total }}</td>
             <td>{{ $Adato->Alt_Comercial }}</td>

@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Arbolado</b>Fusa',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -240,6 +240,7 @@ return [
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
+
         ],
         [
             'text' => 'blog',
@@ -247,8 +248,57 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Arbolados',
+            'text'        => 'Arbolado',
             'url'         => 'arbolados',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Origen',
+            'url'         => 'origens',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Estado de Conservacion',
+            'url'         => 'estd_conservas',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Habito',
+            'url'         => 'habitos',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Tipo',
+            'url'         => 'tipos',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Sitio',
+            'url'         => 'sitios',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Estado',
+            'url'         => 'estados',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 'CRUD',
+            'label_color' => 'warning',
+        ],
+        [
+            'text'        => 'Raiz',
+            'url'         => 'raizs',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 'CRUD',
             'label_color' => 'warning',
